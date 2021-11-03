@@ -45,7 +45,6 @@ const getData = async(e) => {
         }
     })
     if (data.ok) {
-        console.log(data)
         let products = await data.json()
         let row = document.getElementById("cards")
         products.forEach(element => {
@@ -56,7 +55,7 @@ const getData = async(e) => {
             <p class="card-text ml-4">${element.image}</p>
             <p class="card-text ml-4">${element.price}</p>
             `
-        });
+        })
     } else {
         alert("fetched din't appen")
     }
