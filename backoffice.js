@@ -59,10 +59,7 @@ const postData = async() => {
             name: `Alphabet`,
             description: "the best phone of your life",
             brand: "Alphabet",
-            imageUrl: "onsubmit="
-            postNewData() https: //www.unieuro.it/online/iPhone/iPhone-12-128GB---Verde-pidAPLIPHONE12128GR?gclsrc=aw.ds&gclid=Cj0KCQjw5oiMBhDtARIsAJi0qk2cWZdeXlOos1a3eeeOU4XQrvtyLyFk9X6bDcFDaOPuJHV3CjCF2Z0aAqPfEALw_wcB&gclsrc=aw.ds"
-                postNewData()
-            ",
+            imageUrl: "https://www.unieuro.it/online/iPhone/iPhone-12-128GB---Verde-pidAPLIPHONE12128GR?gclsrc=aw.ds&gclid=Cj0KCQjw5oiMBhDtARIsAJi0qk2cWZdeXlOos1a3eeeOU4XQrvtyLyFk9X6bDcFDaOPuJHV3CjCF2Z0aAqPfEALw_wcB&gclsrc=aw.ds",
             price: 100
         }),
 
