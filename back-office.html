@@ -20,41 +20,44 @@
 
 <body>
     <div class="container justify-content-center mt-2 mt-md-5">
-        <h1 style="color:rgb(97, 52, 180)">Welcome on <span style="font-size:3rem; font-family: 'Henny Penny', cursive; color:blue">STRIVAZON!</span> backoffice</h1>
+        <h1 style="color:rgb(97, 52, 180)">Welcome on <span style="font-size:3rem; font-family: 'Henny Penny', cursive; color:blue">STRIVAZON!</span> backoffice
+        </h1>
     </div>
     <div class="container container-fluid justify-content-center  mt-5">
         <div class="row mt-5 justify-content-center text-center" id="form">
-            <form class="col-6" onsubmit="postNewData()">
+            <form class="col-6">
                 <div class=" form-group ">
-                    <label for="product ">Product name</label>
-                    <input type="text " class="form-control " id="product " aria-describedby="emailHelp ">
+                    <label for="name ">Product name</label>
+                    <input type="text" class="form-control " id="name" aria-describedby="emailHelp ">
                 </div>
                 <div class="form-group ">
                     <label for="description ">Description</label>
-                    <input type="text " class="form-control " id="description ">
+                    <input type="text" class="form-control " id="description">
                 </div>
                 <div class="form-group ">
                     <label for="brand ">Brand</label>
-                    <input type="text " class="form-control " id="brand ">
+                    <input type="text" class="form-control " id="brand">
                 </div>
                 <div class="form-group ">
                     <label for="image ">image url</label>
-                    <input type="password " class="form-control " id="image ">
+                    <input type="text" class="form-control " id="image">
                 </div>
                 <div class="form-group ">
                     <label for="price ">Price</label>
-                    <input type="text " class="form-control " id="price ">
+                    <input type="text" class="form-control " id="price">
                 </div>
 
-                <button type="submit " onsubmit="postNewData() " class="btn btn-primary ">Submit</button>
+                <button type="submit" class="btn btn-primary ">Submit</button>
             </form>
 
 
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js " integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous ">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js " integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF " crossorigin="anonymous ">
+    </script>
 
     <script src="backoffice.js "></script>
 </body>
