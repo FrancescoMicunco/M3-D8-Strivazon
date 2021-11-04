@@ -1,13 +1,16 @@
 window.onload = async() => {
-
-
+        const id = new.URLSearchParams(window.location.search).get("element._id")
+        if (id) {
+            await putItem()
+        } else {
+            await postData()
+        }
     }
     // post product
 
 const postData = async(element) => {
     const url = "https://striveschool-api.herokuapp.com/api/product/"
-    product.preventDefault();
-
+    element.preventDefault();
     let name = document.getElementById("name").value
     let description = document.getElementById("description").value
     let brand = document.getElementById("brand").value
@@ -47,7 +50,7 @@ const postData = async(element) => {
 
 } */
 
-/* function putItem() {
+function putItem() {
     let data = await fetch("https://striveschool-api.herokuapp.com/api/product/?id=" + idItem, {
         method: "PUT",
         headers: {
@@ -70,4 +73,4 @@ const postData = async(element) => {
     } else {
         alert("fetched din't appen")
     }
-} */
+}

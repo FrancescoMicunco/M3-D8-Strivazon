@@ -11,12 +11,15 @@ const getData = async(e) => {
         let products = await data.json()
 
         products.forEach(element => {
+
             row.innerHTML += `<ul class="list-group">
             <li class="list-group-item" style="font-weight:bold">${element.name}</li> 
             <li class="list-group-item">${element.description}</li>
             <li class="list-group-item">${element.brand}</li>
             <li class="list-group-item">${element.image}</li>
             <li class="list-group-item">${element.price}</li>
+            <li class = "list-group-item"><a href="/detail.html?${element._id}">details</a></li>
+
             </ul>`
         })
     } else {
