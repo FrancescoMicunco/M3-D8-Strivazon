@@ -48,13 +48,13 @@ const getData = async(e) => {
         let products = await data.json()
         let row = document.getElementById("cards")
         products.forEach(element => {
-            row.innerHTML += `<p>${element.name}</p> 
-            <p class="card-text ml-4">${element.description}</p>
-            <p class="card-text ml-4">${element.description}</p>
-            <p class="card-text ml-4">${element.brand}</p>
-            <p class="card-text ml-4">${element.image}</p>
-            <p class="card-text ml-4">${element.price}</p>
-            `
+            row.innerHTML += `<ul class="list-group"><li class="list-group-item" style="font-weight:bold">${element.name}</li> 
+            
+            <li class="list-group-item">${element.description}</li>
+            <li class="list-group-item">${element.brand}</li>
+            <li class="list-group-item">${element.image}</li>
+            <li class="list-group-item">${element.price}</li>
+            </ul>`
         })
     } else {
         alert("fetched din't appen")
