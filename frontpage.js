@@ -18,7 +18,8 @@ const getData = async(e) => {
             <li class="list-group-item">${element.brand}</li>
             <li class="list-group-item">${element.image}</li>
             <li class="list-group-item">${element.price}</li>
-            <li class = "list-group-item"><a href="/detail.html?${element._id}">details</a></li>
+             <a href = "/detail.html?id=${element._id}" >
+                 details </a>
 
             </ul>`
         })

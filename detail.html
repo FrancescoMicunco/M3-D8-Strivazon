@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Poppins:wght@600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Strivazon</title>
+</head>
+
+<body>
+    <div class="container d-flex justify-content-around mt-2 mt-md-5">
+        <h1 style="color:rgb(97, 52, 180)">Welcome on <span style="font-size:3rem; font-family: 'Henny Penny', cursive; color:blue">STRIVAZON!</span></h1>
+        <a href="back-office.html" id="loginBackOffice" class="btn btn-primary rounded-pill pt-3 px-3" style="background-color: blue;">Back-Office</a>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+
+    <script src="frontpage.js"></script>
+    <script>
+        window.onload = async() => {
+            const id = new URLSearchParams(window.location.search).get("id")
+            let row = document.getElementById("cards")
+            let data = await fetch("https://striveschool-api.herokuapp.com/api/product/" + id, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTgyOGQ1MWFhY2FhMjAwMTU1MmExNzUiLCJpYXQiOjE2MzU5NDU4MDksImV4cCI6MTYzNzE1NTQwOX0.8-JnqeWjE2RLRn6wo9eXe6lfTacIEpgdPvytb9NRr0I"
+                }
+            })
+            if (data.ok) {
+                let product = await data.json()
+
+                console.log(id)
+                let row = document.querySelector("row");
+                /* row.innerHTML = `
+            <div class="card" >
+                
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+                      
+                    ` */
+            }
+        }
+    </script>
+</body>
+
+</html>
